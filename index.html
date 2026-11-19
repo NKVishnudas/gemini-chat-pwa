@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>India Market Intelligence</title>
+  <title>IMI Agent | Automotive Intelligence</title>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#0f172a" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -351,8 +351,8 @@
         <img src="icon.png" alt="Renault Logo" class="brand-logo-img" />
       </div>
       <div>
-        <div class="brand-title">Showroom Copilot</div>
-        <div class="brand-subtitle">Renault Intelligence</div>
+        <div class="brand-title">IMI Agent</div>
+        <div class="brand-subtitle">Automotive Intelligence</div>
       </div>
     </div>
     <button id="newChatBtn" type="button">
@@ -513,7 +513,24 @@
       chatBox.innerHTML = '';
 
       if (current.messages.length === 0) {
-        appendMessage('model', "👋 **Welcome to Showroom Copilot!**\n\nI am connected to your live Cloudflare D1 showroom database with verified:\n- **September 2026 Sales & Dispatches** (111 models)\n- **ARAI Fuel Efficiency & Powertrains** (78 models)\n- **Complete Vehicle Specifications & Features**\n\nTap any quick query above or ask a question to begin!");
+        appendMessage('model', `Hello, I'm **IMI Agent**! 🚘
+
+I can help you understand our competitors in the Indian automotive market.
+
+### 🚗 Available Vehicles for Search & Benchmarking (38 Models):
+- **Hyundai**: Venue, Creta, Creta EV, Exter, Alcazar, Bayon
+- **Kia**: Seltos, Sonet, Syros, Syros EV, Carens Clavis
+- **Tata**: Nexon, Punch, Punch EV, Sierra
+- **Mahindra**: 3XO, 3XO EV, 7XO, Thar OG
+- **Renault**: Duster, Kiger, Triber, Kwid
+- **Maruti Suzuki**: Brezza, Fronx, Grand Vitara, Victoris, Ertiga, S-Presso, Alto K10
+- **Toyota**: Hyryder, Innova Hycross
+- **Nissan**: Magnite, Gravite
+- **MG**: Windsor EV
+- **Skoda**: Kylaq | **Honda**: Elevate | **Volkswagen**: Taigun
+
+---
+*Feel free to ask about **specifications**, **Bharat NCAP ratings**, **fuel economy**, or **sales volume**!*`);
       } else {
         current.messages.forEach(msg => appendMessage(msg.role, msg.parts[0].text));
       }
